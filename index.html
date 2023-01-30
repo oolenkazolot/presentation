@@ -111,6 +111,77 @@
 						</code>
 					</pre>
         </section>
+        <section>
+          <h2>The grid-column Property</h2>
+          <p>The grid-column property defines on which column(s) to place an item.</p>
+          <p>You define where the item will start, and where the item will end.</p>
+          <p>Note: The grid-column property is a shorthand property for the grid-column-start and the grid-column-end properties.</p>
+        </section>
+        <section>
+          <h2>CSS Grid Item</h2>
+          <p>A grid container contains grid items.</p>
+          <p>By default, a container has one grid item for each column, in each row, but you can style the grid items so that they will span multiple columns and/or rows.</p>
+          <pre>
+						<code>
+							.item1 {
+								grid-column: 1 / 5;
+							}
+						</code>
+					</pre>
+        </section>
+        <section>
+          <h2>The grid-row Property</h2>
+          <p>The grid-row property defines on which row to place an item.</p>
+          <p>You define where the item will start, and where the item will end.</p>
+          <pre>
+						<code>
+							.item1 {
+								grid-row: 1 / 4;
+							}
+						</code>
+					</pre>
+        </section>
+        <section>
+          <h2>The grid-area Property</h2>
+          <p>The grid-area property can be used as a shorthand property for the grid-row-start, grid-column-start, grid-row-end and the grid-column-end properties.</p>
+          <pre>
+						<code>
+							.item8 {
+								grid-area: 1 / 2 / 5 / 6;
+							}
+						</code>
+					</pre>
+        </section>
+        <section>
+          <h2>Naming Grid Items</h2>
+          <p>The grid-area property can also be used to assign names to grid items.</p>
+          <p>Named grid items can be referred to by the grid-template-areas property of the grid container.</p>
+          <pre>
+						<code>
+							.item1 {
+								grid-area: myArea;
+							}
+							.grid-container {
+								grid-template-areas: 'myArea myArea myArea myArea myArea';
+							}
+						</code>
+					</pre>
+        </section>
+        <section>
+          <h2>The Order of the Items</h2>
+          <p>The Grid Layout allows us to position the items anywhere we like.</p>
+          <p>The first item in the HTML code does not have to appear as the first item in the grid.</p>
+          <pre>
+						<code>
+							.item1 { grid-area: 1 / 3 / 2 / 4; }
+							.item2 { grid-area: 2 / 3 / 3 / 4; }
+							.item3 { grid-area: 1 / 1 / 2 / 2; }
+							.item4 { grid-area: 1 / 2 / 2 / 3; }
+							.item5 { grid-area: 2 / 1 / 3 / 2; }
+							.item6 { grid-area: 2 / 2 / 3 / 3; }
+						</code>
+					</pre>
+        </section>
       </div>
     </div>
 
