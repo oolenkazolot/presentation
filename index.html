@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/beige.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>CSS Grid Layout</h1>
+          <p>The CSS Grid Layout module offers a grid-based layout system with rows and columns.</p>
+          <p>This module simplifies the development of web pages. At the same time, without the use of floating elements and positioning.</p>
+        </section>
+        <section>
+          <h2>grid container</h2>
+          <p>A grid container is an HTML element that has its display property set to grid or inline-grid.</p>
+          <p>All children of the grid container are grid items (columns and rows).</p>
+        </section>
+        <section>
+          <h2>Grid Gaps</h2>
+          <p>The spaces between each column/row are called gaps.</p>
+          <ul>
+            You can adjust the gap size by using one of the following properties:
+            <li>column-gap - sets the spacing between columns</li>
+            <li>row-gap - sets the spacing between lines</li>
+            <li>is a shorthand for properties row-gap and column-gap</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Grid Lines</h2>
+          <p>The lines between columns are called column lines.</p>
+          <p>The lines between rows are called row lines.</p>
+          <p>Place a grid item at column line 1, and let it end on column line 3:</p>
+          <pre>
+						<code>
+							.item1 {
+ 								grid-column-start: 1;
+  							grid-column-end: 3;
+							}
+						</code>
+					</pre>
+        </section>
+        <section>
+          <h2>CSS properties that apply to the grid container</h2>
+          <ol>
+            <li>The grid-template-rows Property</li>
+            <li>The grid-template-columns Property</li>
+            <li>The justify-content Property</li>
+            <li>The align-content Property</li>
+          </ol>
+        </section>
+        <section>
+          <h2>The grid-template-rows Property</h2>
+          <p>The grid-template-rows property defines the height of each row.</p>
+          <pre>
+						<code>
+							.grid-container {
+								display: grid;
+								grid-template-rows: 80px 200px;
+							}
+							
+						</code>
+					</pre>
+        </section>
+        <section>
+          <h2>The grid-template-columns Property</h2>
+          <p>The grid-template-columns property defines the number of columns in your grid layout, and it can define the width of each column.</p>
+          <p>The value is a space-separated-list, where each value defines the width of the respective column.</p>
+          <pre>
+            <code> .grid-container {
+							display: grid;
+							grid-template-columns: auto auto auto auto;
+						}
+						 </code>
+          </pre>
+        </section>
+        <section>
+          <h2>The justify-content Property</h2>
+          <p>The justify-content property is used to align the whole grid inside the container.</p>
+          <pre>
+            <code> 
+							.grid-container {
+							display: grid;
+							justify-content: space-between;
+						}
+						 </code>
+					</pre>
+          <p>Note: The grid's total width has to be less than the container's width for the justify-content property to have any effect.</p>
+        </section>
+        <section>
+          <h2>The align-content Property</h2>
+          <p>The align-content property is used to vertically align the whole grid inside the container.</p>
+          <p>Note: The grid's total height has to be less than the container's height for the align-content property to have any effect.</p>
+          <pre>
+						<code>
+							.grid-container {
+								display: grid;
+								height: 400px;
+								align-content: center;
+							}
+						</code>
+					</pre>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
